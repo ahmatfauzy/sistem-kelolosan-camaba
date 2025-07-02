@@ -25,7 +25,7 @@ export default function HomePage() {
             Sistem Pendukung Keputusan
           </h1>
           <h2 className="text-2xl font-semibold text-blue-600 mb-6">
-            Kelolosan Calon Mahasiswa Teknik Informatika
+            Kelolosan Calon Mahasiswa Baru
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Sistem ini menggunakan metode <strong>TOPSIS</strong> (Technique for

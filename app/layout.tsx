@@ -10,9 +10,9 @@ import { Home, BarChart3 } from "lucide-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SPK Kelolosan Camaba TI",
+  title: "SYNCSELECT | SPK Kelolosan Camaba",
   description:
-    "Sistem Pendukung Keputusan Kelolosan Calon Mahasiswa Program Studi Teknik Informatika",
+    "Sistem Pendukung Keputusan Kelolosan Calon Mahasiswa Baru",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-3">
             <div className="flex items-center justify-between">
               <Link href="/" className="text-xl font-bold text-blue-600">
-                SPK Camaba TI
+                SYNCSELECT
               </Link>
               <div className="flex gap-2">
                 <Link href="/">
