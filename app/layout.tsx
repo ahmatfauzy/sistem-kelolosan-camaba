@@ -2,9 +2,9 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import Link from "next/link";
-import { Button } from "@components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Home, BarChart3 } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
