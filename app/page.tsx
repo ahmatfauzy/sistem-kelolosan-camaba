@@ -12,106 +12,156 @@ import {
   Users,
   Calculator,
   FileSpreadsheet,
-  Settings
+  Settings,
+  ArrowRight,
+  CheckCircle
 } from 'lucide-react';
 
 export default function HomePage() {
+  const features = [
+    {
+      icon: BarChart3,
+      title: 'Perhitungan TOPSIS',
+      description:
+        'Algoritma seleksi objektif dengan normalisasi dan pembobotan dinamis',
+      color: 'text-blue-600'
+    },
+    {
+      icon: Users,
+      title: 'Manajemen Kandidat',
+      description: 'Kelola data calon mahasiswa dengan interface yang intuitif',
+      color: 'text-green-600'
+    },
+    {
+      icon: Calculator,
+      title: 'Pengaturan Bobot',
+      description: 'Kustomisasi tingkat kepentingan kriteria (1-5) per periode',
+      color: 'text-purple-600'
+    },
+    {
+      icon: FileSpreadsheet,
+      title: 'Import & Export',
+      description: 'Dukungan Excel untuk input data dan ekspor hasil ranking',
+      color: 'text-orange-600'
+    },
+    {
+      icon: Settings,
+      title: 'Kriteria Fleksibel',
+      description: 'Buat dan sesuaikan kriteria penilaian setiap periode',
+      color: 'text-gray-600'
+    }
+  ];
+
+  const benefits = [
+    'Proses seleksi yang objektif dan transparan',
+    'Interface modern dengan dukungan dark mode',
+    'Perhitungan otomatis menggunakan metode TOPSIS',
+    'Statistik dan visualisasi data yang komprehensif',
+    'Export hasil dalam format Excel'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-20">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Sistem Pendukung Keputusan
-          </h1>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-6">
-            Kelolosan Calon Mahasiswa Baru
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Sistem ini menggunakan metode <strong>TOPSIS</strong> (Technique for
-            Order Preference by Similarity to Ideal Solution) untuk menentukan
-            ranking calon mahasiswa berdasarkan{' '}
-            <strong>penilaian dan bobot kriteria yang fleksibel</strong> tiap
-            periode.
-          </p>
+    <div className="container mx-auto px-4 py-12">
+      {/* Hero Section */}
+      <div className="text-center mb-16 space-y-6">
+        <div className="inline-flex items-center rounded-full border px-4 py-2 text-sm bg-muted/50">
+          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+          Sistem Pendukung Keputusan Terpercaya
         </div>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          <Card className="text-center">
-            <CardHeader>
-              <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-              <CardTitle className="text-lg">Perhitungan TOPSIS</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
-                Proses seleksi objektif berdasarkan nilai ternormalisasi dan
-                pembobotan dinamis.
-              </CardDescription>
-            </CardContent>
-          </Card>
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+            Kelolosan Calon
+          </span>
+          <br />
+          <span className="text-foreground">Mahasiswa Baru</span>
+        </h1>
 
-          <Card className="text-center">
-            <CardHeader>
-              <Users className="w-12 h-12 text-green-600 mx-auto mb-2" />
-              <CardTitle className="text-lg">Manajemen Mahasiswa</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
-                Tambah, edit, atau hapus calon mahasiswa dalam satu periode
-                tertentu.
-              </CardDescription>
-            </CardContent>
-          </Card>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Sistem ini menggunakan metode{' '}
+          <strong className="text-foreground">TOPSIS</strong> untuk menentukan
+          ranking calon mahasiswa berdasarkan penilaian dan bobot kriteria yang
+          fleksibel setiap periode.
+        </p>
 
-          <Card className="text-center">
-            <CardHeader>
-              <Calculator className="w-12 h-12 text-purple-600 mx-auto mb-2" />
-              <CardTitle className="text-lg">Pengaturan Bobot</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
-                Tentukan tingkat kepentingan (1–5) untuk setiap kriteria
-                penilaian.
-              </CardDescription>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center">
-            <CardHeader>
-              <FileSpreadsheet className="w-12 h-12 text-orange-600 mx-auto mb-2" />
-              <CardTitle className="text-lg">Import & Export</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
-                Dukungan impor data dari Excel dan ekspor hasil ranking ke
-                format spreadsheet.
-              </CardDescription>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center">
-            <CardHeader>
-              <Settings className="w-12 h-12 text-gray-700 mx-auto mb-2" />
-              <CardTitle className="text-lg">Kustomisasi Kriteria</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>
-                Buat dan sesuaikan kriteria penilaian tiap periode dengan jumlah
-                dan bobot yang tidak tetap.
-              </CardDescription>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/dashboard">
-            <Button size="lg" className="text-lg px-8 py-3">
-              Mulai Menggunakan Sistem
+            <Button
+              size="lg"
+              className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+            >
+              Mulai Menggunakan
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
+          <Button
+            variant="outline"
+            size="lg"
+            className="text-lg px-8 py-3 bg-transparent"
+          >
+            Pelajari Lebih Lanjut
+          </Button>
         </div>
+      </div>
+
+      {/* Features Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {features.map((feature, index) => (
+          <Card
+            key={index}
+            className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur"
+          >
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted/50 group-hover:scale-110 transition-transform">
+                <feature.icon className={`w-8 h-8 ${feature.color}`} />
+              </div>
+              <CardTitle className="text-lg font-semibold">
+                {feature.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <CardDescription className="text-sm leading-relaxed">
+                {feature.description}
+              </CardDescription>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      {/* Benefits Section */}
+      <Card className="mb-16 border-0 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl font-bold">
+            Keunggulan Sistem
+          </CardTitle>
+          <CardDescription>
+            Mengapa memilih SYNCSELECT untuk proses seleksi?
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <span className="text-sm">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* CTA Section */}
+      <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+        <h2 className="text-3xl font-bold mb-4">Siap Memulai Seleksi?</h2>
+        <p className="text-xl mb-8 opacity-90">
+          Bergabunglah dengan institusi yang telah mempercayai sistem kami
+        </p>
+        <Link href="/dashboard">
+          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+            Akses Dashboard
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

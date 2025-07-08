@@ -82,7 +82,7 @@ export const importFromExcel = (
             no_kontak: String(row.no_kontak || '').trim(),
             alamat: String(row.alamat || '').trim()
           });
-
+          
           // Loop kriteria untuk ambil nilai per kriteria
           kriteria.forEach((k) => {
             const raw = row[k.nama];
