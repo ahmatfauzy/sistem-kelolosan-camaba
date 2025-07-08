@@ -30,8 +30,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed top-0 left-0 right-0 shadow-sm z-50">
-            <div className="container mx-auto px-4 py-3">
+          <nav className="border-b bg-background fixed top-0 left-0 right-0 shadow-sm z-50">
+            <div className="container mx-auto px-8 py-3 max-w-7xl">
               <div className="flex items-center justify-between">
                 <Link
                   href="/"
