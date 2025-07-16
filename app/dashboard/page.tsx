@@ -691,37 +691,6 @@ export default function DashboardPage() {
                 </CardContent>
               </Card>
             </div>
-
-            {/* Quick Actions */}
-            {/* <Card>
-              <CardHeader>
-                <CardTitle>Quick Actions</CardTitle>
-                <CardDescription>Aksi cepat untuk mengelola data</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-4">
-                  <Button onClick={handleAddMahasiswa} disabled={kriteria.length === 0}>
-                    <Plus className="w-4 h-4 mr-2" />
-                    Tambah Mahasiswa
-                  </Button>
-                  <Button variant="outline" onClick={() => document.getElementById("import-excel")?.click()}>
-                    <Upload className="w-4 h-4 mr-2" />
-                    Import Excel
-                  </Button>
-                  <input
-                    id="import-excel"
-                    type="file"
-                    accept=".xlsx,.xls"
-                    onChange={handleImportExcel}
-                    className="hidden"
-                  />
-                  <Button variant="outline" onClick={handleExportRanking} disabled={ranking.length === 0}>
-                    <FileDown className="w-4 h-4 mr-2" />
-                    Export Ranking
-                  </Button>
-                </div>
-              </CardContent>
-            </Card> */}
           </TabsContent>
 
           <TabsContent value="periode" className="space-y-8">
@@ -1072,7 +1041,7 @@ export default function DashboardPage() {
                     </DialogContent>
                   </Dialog>
 
-                  <div className="flex items-center gap-2">
+                  {/* <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
                       onClick={() => document.getElementById("import-excel")?.click()}
@@ -1088,7 +1057,7 @@ export default function DashboardPage() {
                       onChange={handleImportExcel}
                       className="hidden"
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="overflow-x-auto">
